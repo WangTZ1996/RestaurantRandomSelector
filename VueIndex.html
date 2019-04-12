@@ -6,10 +6,19 @@
     <link rel="stylesheet" type="text/css" href="VueIndex.css">
   </head>
   <body>
-    <text id="input1" v-model></text>
+    <textarea id="input1" v-model='inputMsg' placeholder="添加一家新的餐馆吧"> {{inputMsg}} </textarea>
     <div id="app1" :class={action:isAction} @click = 'dice.roll'>{{ msg }}</div>
     <div id="component-demo" @click = 'dice.roll'> {{text}} </div>
-
+    <list id="list">
+      <li class="right">阿达西</li>
+      <li class="right">南城香</li>
+      <li class="left">大同刀削面</li>
+      <li class="left">护国寺小吃</li>
+      <li class="left">鱼你在一起</li>
+      <li class="right">春饼</li>
+      <li class="right">外卖</li>
+      <li class="left">庆丰包子</li>
+    </list>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="VueIndex.js"></script>
   </body>

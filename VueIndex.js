@@ -8,51 +8,32 @@ class Dice{
     },2375);
     setTimeout(function(){app1.isAction = false;},2500);
   }
+  addRestaurant() {
+    let restaurant = {};
+    restaurant.name = input.inputMsg;
+    list.push(restaurant);
+  }
 }
 
 let dice = new Dice();
 
 let list = [{name : '阿达西',
-                 color : '#629e13'},
-                 {name : '南城香',
-                 color : '#a81f14'},
-                 {name : '大同刀削面',
-                 color : '#4364e9'},
-                 {name : '护国寺小吃',
-                 color : '#3182e7'},
-                 {name : '鱼你在一起',
-                 color : '#a8f07d'},
-                 {name : '南城香',
-                 color : '#f9cae7'},
-                 {name : '护国寺小吃',
-                 color : '#3182e7'},
-                 {name : '南城香',
-                 color : '#f9cae7'},
-                 {name : '春饼',
-                 color : '#f9cae7'},
-                 {name : '南城香',
-                 color : '#f9cae7'},
-                 {name : '外卖',
-                 color : '#f9cae7'},
-                 {name : '阿达西',
-                 color : '#629e13'},
-                 {name : '南城香',
-                 color : '#a81f14'},
-                 {name : '护国寺小吃',
-                 color : '#3182e7'},
-                 {name : '南城香',
-                 color : '#4364e9'},
-                 {name : '庆丰包子',
-                 color : '#5f210b'},
-                 {name : '鱼你在一起',
-                 color : '#a8f07d'},
-                 {name : '护国寺小吃',
-                 color : '#3182e7'},
-                 {name : '南城香',
-                 color : '#f9cae7'},
-                 {name : '外卖',
-                 color : '#f9cae7'},
-                ];
+            color : '#629e13'},
+            {name : '南城香',
+            color : '#a81f14'},
+            {name : '大同刀削面',
+            color : '#4364e9'},
+            {name : '护国寺小吃',
+            color : '#3182e7'},
+            {name : '鱼你在一起',
+            color : '#a8f07d'},
+            {name : '春饼',
+            color : '#f9cae7'},
+            {name : '外卖',
+            color : '#f9cae7'},
+            {name : '庆丰包子',
+            color : '#5f210b'},
+          ];
 
 let app1 = new Vue({
   el: '#app1',
@@ -62,10 +43,17 @@ let app1 = new Vue({
   }
 })
 
-let com = new Vue({
+let button = new Vue({
   el: '#component-demo',
   data: {
     text: 'START!',
+  }
+})
+
+let input = new Vue({
+  el: '#input1',
+  data: {
+    inputMsg: '',
   }
 })
 
