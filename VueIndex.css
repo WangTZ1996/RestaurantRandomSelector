@@ -1,19 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 @keyframes act1{
-    25% {transform: rotate3d(1,1,0,0.5turn );
-         background: #835bcb;
-         border: 20px solid #8474dc;
+    10% {transform: rotate3d(0,1,0,0.5turn );
     }
-    50% {transform: rotate3d(0,1,0,0.5turn );
-         background: #447bc4;
-         border: 20px solid #447bc4;
+    20% {transform: rotate3d(0,1,0,1turn );
     }
-    75% {transform: rotate3d(0,0,1,0.5turn );
-         background: #61ecc8;
-         border: 20px solid #61ecc8;
+    30% {transform: rotate3d(1,0,0,0.5turn );
+    }
+    40% {transform: rotate3d(1,0,0,1turn );  
+    }
+    50% {transform: rotate3d(1,1,0,0.5turn );
+    }
+    60% {transform: rotate3d(1,1,0,1turn );
+    }
+    70% {transform: rotate3d(1,1,0,0.5turn  );
+    }
+    80% {transform: rotate3d(1,1,0,1turn);
+    }
+    90% {transform: rotate3d(0,1,0,0.5turn );
     }
     100% {transform: rotate3d(0,1,0,1turn );
-         background: #8181e0;
-         border: 20px solid #8181e0;
     }
 }
 
@@ -24,7 +33,7 @@
    left: 50%;
    top: 50%;
    margin-left: -120px; 
-   margin-top: -120px;
+   margin-top: -220px;
    background: #8181e0;
    border: 20px solid #8474dc;
    border-radius: 50px;
@@ -36,7 +45,28 @@
    /* animation: act1 2s infinite; */
 }
 
+#component-demo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 50px;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+    background: #890234;
+    border-radius: 50%;
+    cursor: pointer; 
+    line-height: 200px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: monospace;
+}
+
 .action{
-    animation: act1 2s ;
+    animation: act1 2.5s ;
     animation-fill-mode: forwards;
 }
+
+

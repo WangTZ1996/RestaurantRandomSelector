@@ -6,8 +6,12 @@
     <link rel="stylesheet" type="text/css" href="VueIndex.css">
   </head>
   <body>
-    <div id="app1"  v-bind:class={action:isAction}>{{ msg }}</div>
+    <text id="input1" v-model></text>
+    <div id="app1" :class={action:isAction} @click = 'dice.roll'>{{ msg }}</div>
+    <div id="component-demo" @click = 'dice.roll'> {{text}} </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="VueIndex.js"></script>
   </body>
 </html>
+
