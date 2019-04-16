@@ -13,8 +13,8 @@ class Dice{
     restaurant.name = input.inputMsg;
     list.push(restaurant);
   }
-
 }
+
 
 let dice = new Dice();
 
@@ -36,48 +36,36 @@ let list = [{name : '阿达西',
             color : '#5f210b'},
           ];
 
+Vue.component('input1',{
+  data: function() { },
+  template:'<input id="input1"></input>'
+})
+
+Vue.component('component-demo',{
+  data: function() { },
+  template:'<button class="start" @click="dice.roll">START!</button>'
+})
+
+let dicecard = Vue.component('dicecard',{
+  data: function() {
+    return {
+    }
+   },
+   props: [ 'msg','isAction' ],
+  template: '<div id="dicecard" :msg="msg" >{{msg}}</div>'
+})
+
+
 let app1 = new Vue({
   el: '#app1',
   data: {
-    msg: '吃点啥呢？',
-    isAction: false,
+      msg: '吃点啥呢?',
+      isAction: false
   }
-})
-
-let button = new Vue({
-  el: '#component-demo',
-  data: {
-    text: 'START!',
-  }
-})
-
-let input = new Vue({
-  el: '#input1',
-  data: {
-    inputMsg: '',
-  }
-})
-
-let diceBox = new Vue({
-  el: '.diceBox'
 });
 
-Vue.component('button-counter', {
-  data: function () {
-    return {
-      count: 0
-    }
-  },
-  template: '<div class="template" v-on:click="count++">You clicked me {{ count }} times.</div>'
-})
 
-Vue.component('button-reduce', {
-  data: function () {
-    return {
-      count: 0
-    }
-  },
-  template: '<div class="template" v-on:click="count--">You clicked me {{ count }} times.</div>'
-})
 
-new Vue({ el: '#components-demo' })
+
+
+

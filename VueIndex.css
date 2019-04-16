@@ -12,29 +12,28 @@ body{
     }
     100% {transform: rotate3d(0,1,0,1turn);  
     }
-    /* 50% {transform: rotate3d(0,1,0,0.5turn);
-    }
-    60% {transform: rotate3d(0,1,0,1turn);
-    }
-    70% {transform: rotate3d(0,1,0,0.5turn);
-    }
-    80% {transform: rotate3d(0,1,0,1turn);
-    }
-    90% {transform: rotate3d(0,1,0,0.5turn);
-    }
-    100% {transform: rotate3d(0,1,0,1turn);
-    } */
 }
 
 #app1{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: 0px;
+    background: #fff;
+}
+
+#dicecard{
    position: absolute;
    width: 200px;
    height: 200px;
    left: 50%;
    top: 50%;
-   /* margin-left: 0px;  */
-   margin-top: -220px;
-   background: #8181e0;
+   margin-left: -120px; 
+   margin-top: -190px;
+   background: #8474dc;
    border: 20px solid #8474dc;
    border-radius: 50px;
    text-align: center;
@@ -46,12 +45,12 @@ body{
    cursor: pointer; 
 }
 
-#component-demo{
+.start{
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: 50px;
-    margin-left: 20px;
+    margin-top: 70px;
+    margin-left: -100px;
     width: 200px;
     height: 200px;
     background: #890234;
@@ -63,14 +62,15 @@ body{
     font-weight: 900;
     font-size: 50px;
     font-family: monospace;
+    z-index: 102;
 }
 
 #input1{
     position: absolute;
     left: 50%;
     top: 50%;
-    /* margin-left: -22px; */
-    margin-top: -320px;
+    margin-left: -120px;
+    margin-top: -300px;
     width: 230px;
     height: 80px;
     border: 5px solid #ffd07e;
@@ -115,12 +115,6 @@ body{
     font-size: 26px;
     /* font-weight: 900; */
 }
-
-/* .diceBox{
-    width: 200px;
-    height: 200px;
-    background: #890234;
-} */
 
 .template{
     width: 200px;
