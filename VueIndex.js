@@ -1,6 +1,6 @@
 class Dice{
   roll() {
-    let i = Math.floor(Math.random()*(list.length));
+    let i = Math.floor(Math.random()*(app1.items.length));
     app1.isAction = true;
     setTimeout(function(){
       app1.msg = app1.items[i].name;
@@ -11,7 +11,7 @@ class Dice{
   addRestaurant() {
     let restaurant = {};
     restaurant.name = input.inputMsg;
-    list.push(restaurant);
+    app1.items.push(restaurant);
   }
 }
 
@@ -53,6 +53,11 @@ let app1 = new Vue({
         {name : '外卖'},
         {name : '庆丰包子'},
       ]
+  },
+  methods: {
+    play : function() {
+      play: dice.roll()
+    }
   }
 });
 
