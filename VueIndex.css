@@ -4,26 +4,26 @@ body{
 }
 
 @keyframes act1{
-    10% {transform: rotate3d(0,1,0,0.5turn );
+    25% {transform: rotate3d(0,1,0,0.5turn);
     }
-    20% {transform: rotate3d(0,1,0,1turn );
+    50% {transform: rotate3d(0,1,0,1turn);
     }
-    30% {transform: rotate3d(1,0,0,0.5turn );
+    75% {transform: rotate3d(0,1,0,0.5turn);
     }
-    40% {transform: rotate3d(1,0,0,1turn );  
+    100% {transform: rotate3d(0,1,0,1turn);  
     }
-    50% {transform: rotate3d(1,1,0,0.5turn );
+    /* 50% {transform: rotate3d(0,1,0,0.5turn);
     }
-    60% {transform: rotate3d(1,1,0,1turn );
+    60% {transform: rotate3d(0,1,0,1turn);
     }
-    70% {transform: rotate3d(1,1,0,0.5turn  );
+    70% {transform: rotate3d(0,1,0,0.5turn);
     }
-    80% {transform: rotate3d(1,1,0,1turn);
+    80% {transform: rotate3d(0,1,0,1turn);
     }
-    90% {transform: rotate3d(0,1,0,0.5turn );
+    90% {transform: rotate3d(0,1,0,0.5turn);
     }
-    100% {transform: rotate3d(0,1,0,1turn );
-    }
+    100% {transform: rotate3d(0,1,0,1turn);
+    } */
 }
 
 #app1{
@@ -83,7 +83,7 @@ body{
 }
 
 .action{
-    animation: act1 2.5s ;
+    animation: act1 1s ;
     animation-fill-mode: forwards;
 }
 
@@ -116,3 +116,18 @@ body{
     /* font-weight: 900; */
 }
 
+/* .diceBox{
+    width: 200px;
+    height: 200px;
+    background: #890234;
+} */
+
+.template{
+    width: 200px;
+    height: 200px;
+    background: #890234;
+    border-radius: 40px;
+    line-height: 200px;
+    color: azure;
+    text-align: center;
+}

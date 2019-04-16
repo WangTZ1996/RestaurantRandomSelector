@@ -5,14 +5,15 @@ class Dice{
     setTimeout(function(){
       app1.msg = list[i].name;
       console.log(app1.msg,i);
-    },2375);
-    setTimeout(function(){app1.isAction = false;},2500);
+    },860);
+    setTimeout(function(){app1.isAction = false;},1000);
   }
   addRestaurant() {
     let restaurant = {};
     restaurant.name = input.inputMsg;
     list.push(restaurant);
   }
+
 }
 
 let dice = new Dice();
@@ -57,10 +58,26 @@ let input = new Vue({
   }
 })
 
+let diceBox = new Vue({
+  el: '.diceBox'
+});
 
+Vue.component('button-counter', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<div class="template" v-on:click="count++">You clicked me {{ count }} times.</div>'
+})
 
+Vue.component('button-reduce', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<div class="template" v-on:click="count--">You clicked me {{ count }} times.</div>'
+})
 
-
-
-
-
+new Vue({ el: '#components-demo' })

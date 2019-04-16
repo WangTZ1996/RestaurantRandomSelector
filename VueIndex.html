@@ -6,9 +6,13 @@
     <link rel="stylesheet" type="text/css" href="VueIndex.css">
   </head>
   <body>
+      <div id="components-demo">
+          <button-counter></button-counter>
+          <button-reduce></button-reduce>
+      </div>
     <textarea id="input1" v-model='inputMsg' placeholder="添加一家新的餐馆吧"> {{inputMsg}} </textarea>
     <div id="app1" :class={action:isAction} @click = 'dice.roll'>{{ msg }}</div>
-    <div id="component-demo" @click = 'dice.roll'> {{text}} </div>
+    <div id="component-demo" @click = 'dice.roll'>{{text}} </div>
     <list id="list">
       <li class="right">阿达西</li>
       <li class="right">南城香</li>
@@ -23,4 +27,3 @@
     <script src="VueIndex.js"></script>
   </body>
 </html>
-
