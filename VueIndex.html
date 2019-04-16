@@ -7,9 +7,9 @@
   </head>
   <body>
     <div id="app1">
-      <input1></input1>
-      <diceCard :class={action:isAction}></diceCard>
-      <component-demo></component-demo>
+      <div id="input1"></div>
+      <div id="dicecard" :class={action:isAction}>{{ msg }}</div>
+      <div class="start" @click = 'dice.roll'>{{ btn }}</div>
     </div>
     <list id="list">
       <li class="right">阿达西</li>

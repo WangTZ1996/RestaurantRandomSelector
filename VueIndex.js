@@ -15,7 +15,6 @@ class Dice{
   }
 }
 
-
 let dice = new Dice();
 
 let list = [{name : '阿达西',
@@ -36,30 +35,13 @@ let list = [{name : '阿达西',
             color : '#5f210b'},
           ];
 
-Vue.component('input1',{
-  data: function() { },
-  template:'<input id="input1"></input>'
-})
-
-Vue.component('component-demo',{
-  data: function() { },
-  template:'<button class="start" @click="dice.roll">START!</button>'
-})
-
-let dicecard = Vue.component('dicecard',{
-  data: function() {
-    return {
-    }
-   },
-   props: [ 'msg','isAction' ],
-  template: '<div id="dicecard" :msg="msg" >{{msg}}</div>'
-})
 
 
 let app1 = new Vue({
   el: '#app1',
   data: {
       msg: '吃点啥呢?',
+      btn: 'START!',
       isAction: false
   }
 });
