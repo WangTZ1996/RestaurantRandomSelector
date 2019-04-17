@@ -15,6 +15,17 @@ body{
     }
 }
 
+@keyframes act2{
+    from{ 
+        transform: translate(-60px,0px);
+        visibility: hidden;
+    };
+    to{ 
+        transform: translate(0px,0px);
+        visibility: visible;
+    }
+}
+
 #app1{
     position: absolute;
     width: 600px;
@@ -93,20 +104,55 @@ body{
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    margin-left: -400px;
-    margin-top: -260px;
+    margin-left: -480px;
+    margin-top: -360px;
     list-style: none;
-    width: 260px;
+    width: 340px;
     height: 400px;
     font-size: 32px;
     font-weight: 900; 
     line-height: 80px;
 }
 
+#list h4{
+    color: tomato;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#list h4 span{
+    font-size: 60px;
+    color: orange;
+}
+
 #list li{
     width: 260px;
     height: 60px;
     line-height: 50px;
+}
+
+#list li img{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    visibility: hidden; 
+    z-index: 1000;
+}
+
+#list li:hover img {
+    visibility: visible;
+}
+
+/* .hide{
+    visibility: hidden;
+} */
+/* 
+#list li img:hover{
+    visibility: hidden;
+    transform: visibility;
+} */
+
+.act{
+    animation: act2 1S;
 }
 
 .right{

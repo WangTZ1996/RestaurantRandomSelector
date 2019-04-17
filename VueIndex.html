@@ -11,8 +11,10 @@
       <div id="dicecard" :class="{action:isAction}">{{ restaurantName }}</div>
       <button class="start" @click="roll">START!</button>
       <ul id="list" >
-        <li v-for="(item,index) in items" @click="remove(index)">
+        <h4>附近共有<span>{{ items.length }}</span>家餐厅</h4>
+        <li v-for="(item,index) in items" >
             {{item.name}} 
+            <img src="img/delete.png"  @click="remove(index)"/>
         </li>
       </ul>
     </div>

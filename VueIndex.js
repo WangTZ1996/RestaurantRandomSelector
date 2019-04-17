@@ -25,13 +25,15 @@ new Vue({
       this.inputMsg = '';
     },
     remove: function (index) {
-      alert(index);
-      this.items.splice(index,1);
+      this.items.splice(index, 1);
     },
+    hover: function () {
+      let img = document.querySelectorAll("img");
+      img[1].setAttribute("class : act");
+    }
   },
 });
 
-
 //3.1显示总餐馆数
-//3.2用hover实现显示删除按钮
-
+//3.2实现显示删除按钮的动态显
+//display:none 和 visibility: hidden区别。
