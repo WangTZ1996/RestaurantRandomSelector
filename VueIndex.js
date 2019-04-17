@@ -5,12 +5,12 @@ new Vue({
     isAction: false,
     inputMsg: '',
     items: [
-      { name: '阿达西'},
-      { name: '南城香'},
-      { name: '大同刀削面'},
-      { name: '护国寺小吃'},
-      { name: '鱼你在一起'},
-      { name: '庆丰包子'},
+      { name: '阿达西' },
+      { name: '南城香' },
+      { name: '大同刀削面' },
+      { name: '护国寺小吃' },
+      { name: '鱼你在一起' },
+      { name: '庆丰包子' },
     ],
   },
   methods: {
@@ -24,8 +24,14 @@ new Vue({
       this.items.unshift({ name: this.inputMsg });
       this.inputMsg = '';
     },
-    remove: function (e) {
-      this.items.splice(e.target.innerText.split(".")[0],1);
+    remove: function (index) {
+      alert(index);
+      this.items.splice(index,1);
     },
   },
 });
+
+
+//3.1显示总餐馆数
+//3.2用hover实现显示删除按钮
+
