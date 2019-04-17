@@ -7,9 +7,9 @@
   </head>
   <body>
     <div id="app1">
-      <div id="input1"></div>
-      <div id="dicecard" :class={action:isAction}>{{ msg }}</div>
-      <div class="start" @click="app1.play()">{{ btn }}</div>
+      <input id="input1"></input>
+      <div id="dicecard" :class="{action:isAction}">{{ restaurantName }}</div>
+      <button class="start" @click="roll">START!</button>
       <ul id="list">
         <li v-for="item in items">
           {{item.name}}

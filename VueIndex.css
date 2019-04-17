@@ -63,6 +63,7 @@ body{
     font-size: 50px;
     font-family: monospace;
     z-index: 102;
+    outline: none;
 }
 
 #input1{
