@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="app1">
-      <input id="input1"></input>
+      <input id="input1" autocomplete="off" @keydown="if(event.keyCode===13) {write()}"/>
       <div id="dicecard" :class="{action:isAction}">{{ restaurantName }}</div>
       <button class="start" @click="roll">START!</button>
       <ul id="list">

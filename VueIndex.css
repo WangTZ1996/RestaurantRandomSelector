@@ -92,10 +92,10 @@ body{
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    margin-left: -360px;
-    margin-top: -320px;
+    margin-left: -400px;
+    margin-top: -260px;
     list-style: none;
-    width: 200px;
+    width: 260px;
     height: 400px;
     font-size: 32px;
     font-weight: 900; 
@@ -104,7 +104,7 @@ body{
 
 #list li{
     width: 200px;
-    height: 80px;
+    height: 60px;
     line-height: 50px;
 }
 

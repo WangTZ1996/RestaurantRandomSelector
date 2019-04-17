@@ -10,22 +10,25 @@ new Vue({
       { name: '护国寺小吃' },
       { name: '鱼你在一起' },
       { name: '春饼' },
-      { name: '外卖' },
       { name: '庆丰包子' },
     ],
   },
   methods: {
     roll: function () {
       let i = Math.floor(Math.random() * (this.items.length));
-      this.isAction = true; 
-      setTimeout(() =>this.restaurantName = this.items[i].name,800);
-      setTimeout(() =>this.isAction = false,1000);
+      this.isAction = true;
+      setTimeout(() => this.restaurantName = this.items[i].name, 800);
+      setTimeout(() => this.isAction = false, 1000);
     },
     write: function () {
+      let value = document.querySelector("#input1").value;
+      let name = {name : value};
+      this.items.unshift(name);
+      // alert(value);
+      document.querySelector("#input1").value = '';
     }
   },
 });
-
 
 
 
