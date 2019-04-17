@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="app1">
-      <input id="input1" autocomplete="off" @keydown="if(event.keyCode===13) {write()}"/>
+      <input id="input1" autocomplete="off" @keydown.enter={write()} v-model="inputMsg" placeholder="添加一家新餐馆吧"/>
       <div id="dicecard" :class="{action:isAction}">{{ restaurantName }}</div>
       <button class="start" @click="roll">START!</button>
       <ul id="list">
@@ -20,3 +20,5 @@
     <script src="VueIndex.js"></script>
   </body>
 </html>
+
+
