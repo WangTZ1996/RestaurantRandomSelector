@@ -11,15 +11,18 @@
       <!-- <button class="start" @click="roll">START!</button> -->
       <ul id="list" >
         <h4>附近共有<span>{{ items.length }}</span>家餐厅</h4>
-        <input id="input1" autocomplete="off" @keydown.enter=write() v-model="inputMsg" placeholder="添加一家新餐馆吧"/>
+        <input id="input1" autocomplete="off" @keydown.enter=write() v-model="inputMsg" placeholder="今天几个人吃？"/>
         <li v-for="(item,index) in items" >
             {{item.name}} 
             <img src="img/delete.png"  @click="remove(index)"/>
         </li>
+        <!-- <input id="input2" autocomplete="off" @keydown.enter=decide() v-model="mouthNum" placeholder="今天几个人吃"/> -->
       </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="data.js"></script>
     <script src="VueIndex.js"></script>
+
   </body>
 </html>
 
