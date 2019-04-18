@@ -52,7 +52,7 @@ body{
    border-radius: 50px;
    text-align: center;
    line-height: 200px;
-   font-size: 36px;
+   font-size: 30px;
    font-weight: 900;
    color: azure;
    font-family:  monospace;
@@ -81,13 +81,10 @@ body{
 }
 
 #input1{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -120px;
-    margin-top: -300px;
+    margin-left: 50px;
+    margin-bottom: 20px;
     width: 230px;
-    height: 80px;
+    height: 60px;
     border: 5px solid #ffd07e;
     border-radius: 20px;
     line-height: 80px;
@@ -114,7 +111,7 @@ body{
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    margin-left: -480px;
+    margin-left: -520px;
     margin-top: -360px;
     list-style: none;
     width: 340px;
@@ -127,6 +124,8 @@ body{
 #list h4{
     color: tomato;
     font-family: 'Courier New', Courier, monospace;
+    padding-left: 50px;
+    margin: 0px 0px;
 }
 
 #list h4 span{
@@ -137,7 +136,8 @@ body{
 #list li{
     width: 260px;
     height: 60px;
-    line-height: 50px;
+    line-height: 40px;
+    /* vertical-align: middle; */
 }
 
 #list li img{
@@ -147,6 +147,8 @@ body{
     visibility: hidden; 
     z-index: 1000;
     cursor: pointer;
+    float: left;
+    padding-right: 10px;
 }
 
 #list li:hover img {

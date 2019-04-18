@@ -1,7 +1,7 @@
 new Vue({
   el: '#app1',
   data: {
-    restaurantName: '吃点啥呢?',
+    restaurantName: '点击告你吃啥',
     isAction: false,
     inputMsg: '',
     items: [
