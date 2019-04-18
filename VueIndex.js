@@ -21,16 +21,15 @@ new Vue({
         this.inputMsg = '';
         setTimeout(() => document.querySelector("#input1").className = "warning", 1000);
       } else {
-        this.items.unshift({ name: this.inputMsg });
+        this.items.unshift({ name:  this.inputMsg.split(" ")[0],seats: this.inputMsg.split(" ")[1]});
         document.querySelector("#input1").className = "";
         this.inputMsg = '';
-
       }
     },
     remove: function (index) {
       this.items.splice(index, 1);
     },
-    decide: function () {
+    filter: function () {
 
     }
   },
