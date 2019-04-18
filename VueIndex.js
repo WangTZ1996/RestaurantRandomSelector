@@ -4,9 +4,9 @@ new Vue({
     restaurantName: '点击告你吃啥',
     isAction: false,
     inputMsg: '',
-    mouthNum: '',
+    M: 1,
     items: items,
-    switch: 0,
+    // switch: 0,
   },
   methods: {
     roll: function () {
@@ -21,18 +21,10 @@ new Vue({
         this.inputMsg = '';
         setTimeout(() => document.querySelector("#input1").className = "warning", 1000);
       } else {
-        if (this.switch == 0) {
-          this.mouthNum = this.inputMsg;
-          console.log(this.mouthNum);
-          this.inputMsg = '';
-          this.switch = 1;
-          document.querySelector("#input1").setAttribute("placeholder","添加一家餐馆吧")
-        } else if (this.switch == 1) {
-          this.items.unshift({ name: this.inputMsg });
-          document.querySelector("#input1").className = "";
-          this.inputMsg = '';
-          this.switch = 0;
-        }
+        this.items.unshift({ name: this.inputMsg });
+        document.querySelector("#input1").className = "";
+        this.inputMsg = '';
+
       }
     },
     remove: function (index) {
