@@ -6,12 +6,13 @@ new Vue({
     inputMsg: '',
     mouthNum: '',
     items: items,
+    switch: 0,
   },
   methods: {
     roll: function () {
-      let i = Math.floor(Math.random() * (items.length));
+      let i = Math.floor(Math.random() * (this.items.length));
       this.isAction = true;
-      setTimeout(() => this.restaurantName = items[i].name, 800);
+      setTimeout(() => this.restaurantName = this.items[i].name, 800);
       setTimeout(() => this.isAction = false, 1000);
     },
     write: function () {
@@ -20,13 +21,22 @@ new Vue({
         this.inputMsg = '';
         setTimeout(() => document.querySelector("#input1").className = "warning", 1000);
       } else {
-        items.unshift({ name: this.inputMsg });
-        document.querySelector("#input1").className = "";
-        this.inputMsg = '';
+        if (this.switch == 0) {
+          this.mouthNum = this.inputMsg;
+          console.log(this.mouthNum);
+          this.inputMsg = '';
+          this.switch = 1;
+          document.querySelector("#input1").setAttribute("placeholder","添加一家餐馆吧")
+        } else if (this.switch == 1) {
+          this.items.unshift({ name: this.inputMsg });
+          document.querySelector("#input1").className = "";
+          this.inputMsg = '';
+          this.switch = 0;
+        }
       }
     },
     remove: function (index) {
-      items.splice(index, 1);
+      this.items.splice(index, 1);
     },
     decide: function () {
 
@@ -41,3 +51,11 @@ new Vue({
 
 //新需求输入每天吃饭的人数，并且评估每一家餐厅的接待能力排除坐不下的餐厅。
 //进阶需求，摇到餐厅并确认以后自动在网上预定座位。
+
+
+
+
+
+// this.items.unshift({ name: this.inputMsg });
+//         document.querySelector("#input1").className = "";
+//         this.inputMsg = '';
