@@ -15,15 +15,17 @@ body{
     }
 }
 
-@keyframes act2{
-    from{ 
-        transform: translate(-60px,0px);
-        visibility: hidden;
-    };
-    to{ 
-        transform: translate(0px,0px);
-        visibility: visible;
-    }
+@keyframes act2 {
+    10% { transform: translate(60px,0px)}
+    20% { transform: translate(-60px,0px)}
+    30% { transform: translate(50px,0px)}
+    40% { transform: translate(-50px,0px)}
+    50% { transform: translate(40px,0px)}
+    60% { transform: translate(-40px,0px)}
+    70% { transform: translate(30px,0px)}
+    80% { transform: translate(-30px,0px)}
+    90% { transform: translate(20px,0px)}
+    100% { transform: translate(0px,0px)}
 }
 
 #app1{
@@ -95,6 +97,14 @@ body{
     text-align: center;
 }
 
+.warning{
+    border:  5px solid red!important;
+}
+
+.shake{
+    animation: act2 1s;
+}
+
 .action{
     animation: act1 1s ;
     animation-fill-mode: forwards;
@@ -136,20 +146,12 @@ body{
     vertical-align: middle;
     visibility: hidden; 
     z-index: 1000;
+    cursor: pointer;
 }
 
 #list li:hover img {
     visibility: visible;
 }
-
-/* .hide{
-    visibility: hidden;
-} */
-/* 
-#list li img:hover{
-    visibility: hidden;
-    transform: visibility;
-} */
 
 .act{
     animation: act2 1S;
