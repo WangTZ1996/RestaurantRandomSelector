@@ -3,17 +3,37 @@ new Vue({
   data: {
     restaurantName: '点击告你吃啥',
     isAction: false,
+    abled: [],
     // isAvailable: false,
     inputMsg: '',
     M: 1,
     items: items,
   },
   methods: {
+    filter: function () {
+      this.disabled = [];
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].seats >= this.M) {
+          document.querySelectorAll("li")[i].className = "available";
+        } else if (items[i].seats < this.M) {
+          document.querySelectorAll("li")[i].className = "";
+        }
+      }
+      this.abled = document.querySelectorAll(".available");
+    },
     roll: function () {
-      let i = Math.floor(Math.random() * (this.items.length));
-      this.isAction = true;
-      setTimeout(() => this.restaurantName = this.items[i].name, 800);
-      setTimeout(() => this.isAction = false, 1000);
+      if (document.querySelectorAll(".available").length === 0) {
+        this.isAction = true;
+        setTimeout(() => this.restaurantName = "没有可选的", 800);
+        setTimeout(() => this.isAction = false, 1000);
+      } else {
+        this.abled = document.querySelectorAll(".available");
+        let j = Math.floor(Math.random() * (this.abled.length));
+        this.isAction = true;
+        setTimeout(() => this.restaurantName = this.abled[j].innerText.split(" ")[0], 800);
+        console.log(this.abled)
+        setTimeout(() => this.isAction = false, 1000);
+      }
     },
     write: function () {
       if (this.inputMsg.replace(/\s*/g, "") === "") {
@@ -25,19 +45,12 @@ new Vue({
         document.querySelector("#input1").className = "";
         this.inputMsg = '';
       }
+      this.filter();
     },
     remove: function (index) {
       this.items.splice(index, 1);
+      this.filter();
     },
-    filter: function () {
-      for (let i = 0; i < items.length; i++) {
-        if (items[i].seats >= this.M) {
-          document.querySelectorAll("li")[i].className=""
-        }else if (items[i].seats < this.M) {
-          document.querySelectorAll("li")[i].className="available"
-        }
-      }
-    }
   },
 });
 
