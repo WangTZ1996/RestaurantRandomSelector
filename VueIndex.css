@@ -168,10 +168,24 @@ body{
 }
 
 #list li{
-    width: 260px;
+    width: 360px;
     height: 60px;
     line-height: 40px;
     /* vertical-align: middle; */
+}
+
+.available{
+    color: #c3c3c3;
+}
+
+#list li .seatNum{
+    font-size: 24px;
+    color: lightslategray;
+}
+
+#list li span{
+    font-size: 20px;
+    color: dimgrey;
 }
 
 #list li img{

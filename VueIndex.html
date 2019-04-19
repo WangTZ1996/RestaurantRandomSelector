@@ -7,14 +7,14 @@
   </head>
   <body>
     <div id="app1">
-      <div class="screen"><img src="img/add.png" @click="if(M>0&&M<=M) {M++}"><div>人数{{M}}</div><img src="img/reduce.png" @click="if(M>1&&M<=M) {M--}"></div>
+      <div class="screen"><img src="img/reduce.png" @click="if(M>1&&M<=M) {M--;filter()}"><div>人数{{M}}</div><img src="img/add.png" @click="if(M>0&&M<=M) {M++;filter()}"></div>
       <div id="dicecard" :class="{action:isAction}" @click="roll">{{ restaurantName }}</div>
       <!-- <button class="start" @click="roll">START!</button> -->
       <ul id="list" >
         <h4>附近共有<span>{{ items.length }}</span>家餐厅</h4>
         <input id="input1" autocomplete="off" @keydown.enter=write() v-model="inputMsg" placeholder= "添加一家餐厅吧" />
         <li v-for="(item,index) in items" >
-            {{item.name}} 
+            {{item.name}}  <span class="seatNum">{{item.seats}}</span> <span>seats</span>
             <img src="img/delete.png"  @click="remove(index)"/>
         </li>
         <!-- <input id="input2" autocomplete="off" @keydown.enter=decide() v-model="mouthNum" placeholder="今天几个人吃"/> -->
